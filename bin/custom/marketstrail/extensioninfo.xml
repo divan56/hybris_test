@@ -17,7 +17,7 @@
       <!-- <requires-extension name="cms"/> -->         
       
 
-      <coremodule generated="true" manager="markettrail.jalo.MarketstrailManager" packageroot="markettrail"/>
+      <coremodule generated="true" manager="marketstrail.jalo.MarketstrailManager" packageroot="markettrail"/>
 
       <webmodule jspcompile="false" webroot="/marketstrail"/>
 					
