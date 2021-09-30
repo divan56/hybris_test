@@ -52,7 +52,7 @@
 					<persistence type="property"/>
 				</attribute>
 				<attribute qualifier="location" type="java.lang.String">
-					<description>Store's address</description>  <!-- ?????? ???? ????? ????????/????????-->
+					<description>Store's address</description>  <!-- add lock/open time-->
 					<persistence type="property"/>
 				</attribute>
 			</attributes>
