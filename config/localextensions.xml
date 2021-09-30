@@ -3,5 +3,11 @@
     <path dir='${HYBRIS_BIN_DIR}' autoload='false' />
     <extension name="concerttours"/>
     <extension name="backoffice"/>
+
+	<extension name="platformbackoffice"/>
+	<extension name ="marketstrail"/>
+        <!-- ext-template -->
+        <extension name="yempty" />
+        <extension name="yhacext" />
   </extensions>
 </hybrisconfig>
