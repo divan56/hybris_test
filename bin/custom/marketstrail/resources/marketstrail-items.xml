@@ -16,27 +16,37 @@
 <items 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 			xsi:noNamespaceSchemaLocation="items.xsd">
 	<enumtypes>
-		<enumtype code="CategoryType" autocreate="true" generate="true" dynamic="false">
-			<value code="smartphones"/>
-			<value code="laptops"/>
-			<value code="TV"/>
+		<enumtype code="Segment" autocreate="true" generate="true" dynamic="false">
+			<value code="eco"/>
+			<value code="midprice"/>
+			<value code="luxury"/>
 		</enumtype>
 	</enumtypes>
 
 	<relations>
-		<relation code="Electronics2Store" autocreate="true" generate="false" localized="false">
-			<sourceElement qualifier="electronics" type="CustomElectronics" collectiontype="set" cardinality="many" ordered="false">
+		<relation code="Products2Store" autocreate="true" generate="false" localized="false">
+			<sourceElement qualifier="products" type="Product" collectiontype="set" cardinality="many" ordered="false">
 				<modifiers read="true" write="true" search="true" optional="false"/>
 			</sourceElement>
-			<targetElement qualifier="store" type="CustomStore" cardinality="one">
+			<targetElement qualifier="store" type="Store" cardinality="one">
 					<modifiers read="true" write="true" search="true" optional="false"/>
 			</targetElement>
 		</relation>
 	</relations>
 
 	<itemtypes>
+		<itemtype code="Electronic" extends="VariantProduct" autocreate="true" generate="true">
+			<attributes>
+				<attribute qualifier="price" type="java.lang.String">
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="segmentType" type="Segment">
+					<persistence type="property"/>
+				</attribute>
+			</attributes>
+		</itemtype>
 
-		<itemtype code="CustomStore" generate="true" autocreate="true">
+		<itemtype code="Store" generate="true" autocreate="true">
 			<deployment table="stores" typecode="30881"/>
 			<attributes>
 				<attribute qualifier="code" type="java.lang.String">
@@ -57,24 +67,5 @@
 				</attribute>
 			</attributes>
 		</itemtype>
-
-		<itemtype code="CustomElectronics" generate="true" autocreate="true">
-			<deployment table="electronicProducts" typecode="30882"/>
-			<attributes>
-				<attribute qualifier="name" type="java.lang.String" >
-					<description>Product's name</description>
-					<persistence type="property"/>
-				</attribute>
-				<attribute qualifier="price" type="java.lang.Integer">
-					<description>product's price</description>
-					<persistence type="property"/>
-				</attribute>
-				<attribute qualifier="productCategory" type="CategoryType">
-					<description>Product's categories</description>
-					<persistence type="property"/>
-				</attribute>
-			</attributes>
-		</itemtype>
-
 	</itemtypes>
 </items>

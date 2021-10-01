@@ -1,12 +1,12 @@
 package marketstrail.service;
 
-import markettrail.model.CustomStoreModel;
+import markettrail.model.StoreModel;
 
 import java.util.List;
 
 public interface StoreService {
-    List<CustomStoreModel> getAllStores();
+    List<StoreModel> getAllStores();
 
-    CustomStoreModel getStoreByCode(String code);
+    StoreModel getStoreByCode(String code);
 
 }

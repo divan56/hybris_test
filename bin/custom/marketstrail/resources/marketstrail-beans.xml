@@ -26,7 +26,7 @@
 	<bean class="marketstrail.data.ElectronicData">
 		<property name="name" type="String"/>
 		<property name="price" type="Integer"/>
-		<property name="category" type="java.util.List&lt;String&gt;"/>
+		<property name="category" type="String"/>
 	</bean>
 	
 </beans>

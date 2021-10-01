@@ -47,33 +47,33 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 	
 	
 		createItemType(
-			"CustomStore",
-			"GenericItem",
-			markettrail.jalo.CustomStore.class,
-			"de.hybris.platform.persistence.marketstrail_CustomStore",
+			"Electronic",
+			"VariantProduct",
+			markettrail.jalo.Electronic.class,
+			null,
 			false,
 			null,
 			false
 		);
 	
 		createItemType(
-			"CustomElectronics",
+			"Store",
 			"GenericItem",
-			markettrail.jalo.CustomElectronics.class,
-			"de.hybris.platform.persistence.marketstrail_CustomElectronics",
+			markettrail.jalo.Store.class,
+			"de.hybris.platform.persistence.marketstrail_Store",
 			false,
 			null,
 			false
 		);
 	
 		createRelationType(
-			"Electronics2Store",
+			"Products2Store",
 			null,
 			true
 		);
 	
 		createEnumerationType(
-			"CategoryType",
+			"Segment",
 			null
 		);
 	
@@ -90,33 +90,31 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 
 	
 	
-				single_createattr_CustomStore_code();
+				single_createattr_Electronic_price();
 			
-				single_createattr_CustomStore_name();
+				single_createattr_Electronic_segmentType();
 			
-				single_createattr_CustomStore_employees();
+				single_createattr_Store_code();
 			
-				single_createattr_CustomStore_location();
+				single_createattr_Store_name();
 			
-				single_createattr_CustomElectronics_name();
+				single_createattr_Store_employees();
 			
-				single_createattr_CustomElectronics_price();
-			
-				single_createattr_CustomElectronics_productCategory();
+				single_createattr_Store_location();
 			
 		createRelationAttributes(
-			"Electronics2Store", 
+			"Products2Store", 
 			false, 
 
-			"electronics", 
-			"CustomElectronics", 
+			"products", 
+			"Product", 
 			true,
 			de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG, 
 			true,
 			false,
 			CollectionType.SET,
 			"store", 
-			"CustomStore", 
+			"Store", 
 			true,
 			de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG, 
 			false,
@@ -128,13 +126,47 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 	}
 
 	
-	public void single_createattr_CustomStore_code() throws JaloBusinessException
+	public void single_createattr_Electronic_price() throws JaloBusinessException
 	{
 		
 						Map sqlColumnDefinitions = null;
 					
 				createPropertyAttribute(
-					"CustomStore", 
+					"Electronic", 
+					"price",  
+					null,
+					"java.lang.String",
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
+					null,
+					sqlColumnDefinitions
+				);
+			
+	}
+	
+	public void single_createattr_Electronic_segmentType() throws JaloBusinessException
+	{
+		
+						Map sqlColumnDefinitions = null;
+					
+				createPropertyAttribute(
+					"Electronic", 
+					"segmentType",  
+					null,
+					"Segment",
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
+					null,
+					sqlColumnDefinitions
+				);
+			
+	}
+	
+	public void single_createattr_Store_code() throws JaloBusinessException
+	{
+		
+						Map sqlColumnDefinitions = null;
+					
+				createPropertyAttribute(
+					"Store", 
 					"code",  
 					null,
 					"java.lang.String",
@@ -145,13 +177,13 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			
 	}
 	
-	public void single_createattr_CustomStore_name() throws JaloBusinessException
+	public void single_createattr_Store_name() throws JaloBusinessException
 	{
 		
 						Map sqlColumnDefinitions = null;
 					
 				createPropertyAttribute(
-					"CustomStore", 
+					"Store", 
 					"name",  
 					null,
 					"java.lang.String",
@@ -162,13 +194,13 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			
 	}
 	
-	public void single_createattr_CustomStore_employees() throws JaloBusinessException
+	public void single_createattr_Store_employees() throws JaloBusinessException
 	{
 		
 						Map sqlColumnDefinitions = null;
 					
 				createPropertyAttribute(
-					"CustomStore", 
+					"Store", 
 					"employees",  
 					null,
 					"java.lang.Integer",
@@ -179,67 +211,16 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			
 	}
 	
-	public void single_createattr_CustomStore_location() throws JaloBusinessException
+	public void single_createattr_Store_location() throws JaloBusinessException
 	{
 		
 						Map sqlColumnDefinitions = null;
 					
 				createPropertyAttribute(
-					"CustomStore", 
+					"Store", 
 					"location",  
 					null,
 					"java.lang.String",
-					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
-					null,
-					sqlColumnDefinitions
-				);
-			
-	}
-	
-	public void single_createattr_CustomElectronics_name() throws JaloBusinessException
-	{
-		
-						Map sqlColumnDefinitions = null;
-					
-				createPropertyAttribute(
-					"CustomElectronics", 
-					"name",  
-					null,
-					"java.lang.String",
-					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
-					null,
-					sqlColumnDefinitions
-				);
-			
-	}
-	
-	public void single_createattr_CustomElectronics_price() throws JaloBusinessException
-	{
-		
-						Map sqlColumnDefinitions = null;
-					
-				createPropertyAttribute(
-					"CustomElectronics", 
-					"price",  
-					null,
-					"java.lang.Integer",
-					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
-					null,
-					sqlColumnDefinitions
-				);
-			
-	}
-	
-	public void single_createattr_CustomElectronics_productCategory() throws JaloBusinessException
-	{
-		
-						Map sqlColumnDefinitions = null;
-					
-				createPropertyAttribute(
-					"CustomElectronics", 
-					"productCategory",  
-					null,
-					"CategoryType",
 					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
 					null,
 					sqlColumnDefinitions
@@ -259,29 +240,29 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 	
 	
 		createEnumerationValues(
-			"CategoryType",
+			"Segment",
 			false,
 			Arrays.asList( new String[] {
 			
-				"smartphones",
-				"laptops",
-				"TV"
+				"eco",
+				"midprice",
+				"luxury"
 			} )
 		);
 	
-		single_setRelAttributeProperties_Electronics2Store_source();
+		single_setRelAttributeProperties_Products2Store_source();
 	
-		single_setRelAttributeProperties_Electronics2Store_target();
+		single_setRelAttributeProperties_Products2Store_target();
 	
 		connectRelation(
-			"Electronics2Store", 
+			"Products2Store", 
 			false, 
-			"electronics", 
-			"CustomElectronics", 
+			"products", 
+			"Product", 
 			true,
 			de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG, 
 			"store", 
-			"CustomStore", 
+			"Store", 
 			true,
 			de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG, 
 			true,
@@ -292,7 +273,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 				Map customPropsMap = new HashMap();
 				
 				setItemTypeProperties(
-					"CustomStore",
+					"Electronic",
 					false,
 					true,
 					true,
@@ -301,19 +282,15 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 				);
 				}
 			
-			single_setAttributeProperties_CustomStore_code();
+			single_setAttributeProperties_Electronic_price();
 		
-			single_setAttributeProperties_CustomStore_name();
-		
-			single_setAttributeProperties_CustomStore_employees();
-		
-			single_setAttributeProperties_CustomStore_location();
+			single_setAttributeProperties_Electronic_segmentType();
 		
 				{
 				Map customPropsMap = new HashMap();
 				
 				setItemTypeProperties(
-					"CustomElectronics",
+					"Store",
 					false,
 					true,
 					true,
@@ -322,14 +299,16 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 				);
 				}
 			
-			single_setAttributeProperties_CustomElectronics_name();
+			single_setAttributeProperties_Store_code();
 		
-			single_setAttributeProperties_CustomElectronics_price();
+			single_setAttributeProperties_Store_name();
 		
-			single_setAttributeProperties_CustomElectronics_productCategory();
+			single_setAttributeProperties_Store_employees();
+		
+			single_setAttributeProperties_Store_location();
 		
 				setDefaultProperties(
-					"CategoryType",
+					"Segment",
 					true,
 					true,
 					null
@@ -339,7 +318,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 
 
 		
-						public void single_setAttributeProperties_CustomStore_code() throws JaloBusinessException
+						public void single_setAttributeProperties_Electronic_price() throws JaloBusinessException
 						{
 							
 							
@@ -347,117 +326,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							Map customPropsMap = new HashMap();
 							
 							setAttributeProperties(
-								"CustomStore", 
-								"code",
-								false, 
-								null,
-								null,
-								null,
-								true,
-								true,
-								null,
-								customPropsMap,
-								null
-							);
-						}
-					
-						public void single_setAttributeProperties_CustomStore_name() throws JaloBusinessException
-						{
-							
-							
-							
-							Map customPropsMap = new HashMap();
-							
-							setAttributeProperties(
-								"CustomStore", 
-								"name",
-								false, 
-								null,
-								null,
-								null,
-								true,
-								true,
-								null,
-								customPropsMap,
-								null
-							);
-						}
-					
-						public void single_setAttributeProperties_CustomStore_employees() throws JaloBusinessException
-						{
-							
-							
-							
-							Map customPropsMap = new HashMap();
-							
-							setAttributeProperties(
-								"CustomStore", 
-								"employees",
-								false, 
-								null,
-								null,
-								null,
-								true,
-								true,
-								null,
-								customPropsMap,
-								null
-							);
-						}
-					
-						public void single_setAttributeProperties_CustomStore_location() throws JaloBusinessException
-						{
-							
-							
-							
-							Map customPropsMap = new HashMap();
-							
-							setAttributeProperties(
-								"CustomStore", 
-								"location",
-								false, 
-								null,
-								null,
-								null,
-								true,
-								true,
-								null,
-								customPropsMap,
-								null
-							);
-						}
-					
-						public void single_setAttributeProperties_CustomElectronics_name() throws JaloBusinessException
-						{
-							
-							
-							
-							Map customPropsMap = new HashMap();
-							
-							setAttributeProperties(
-								"CustomElectronics", 
-								"name",
-								false, 
-								null,
-								null,
-								null,
-								true,
-								true,
-								null,
-								customPropsMap,
-								null
-							);
-						}
-					
-						public void single_setAttributeProperties_CustomElectronics_price() throws JaloBusinessException
-						{
-							
-							
-							
-							Map customPropsMap = new HashMap();
-							
-							setAttributeProperties(
-								"CustomElectronics", 
+								"Electronic", 
 								"price",
 								false, 
 								null,
@@ -471,7 +340,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							);
 						}
 					
-						public void single_setAttributeProperties_CustomElectronics_productCategory() throws JaloBusinessException
+						public void single_setAttributeProperties_Electronic_segmentType() throws JaloBusinessException
 						{
 							
 							
@@ -479,8 +348,8 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							Map customPropsMap = new HashMap();
 							
 							setAttributeProperties(
-								"CustomElectronics", 
-								"productCategory",
+								"Electronic", 
+								"segmentType",
 								false, 
 								null,
 								null,
@@ -493,15 +362,103 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							);
 						}
 					
-								public void single_setRelAttributeProperties_Electronics2Store_source() throws JaloBusinessException
+						public void single_setAttributeProperties_Store_code() throws JaloBusinessException
+						{
+							
+							
+							
+							Map customPropsMap = new HashMap();
+							
+							setAttributeProperties(
+								"Store", 
+								"code",
+								false, 
+								null,
+								null,
+								null,
+								true,
+								true,
+								null,
+								customPropsMap,
+								null
+							);
+						}
+					
+						public void single_setAttributeProperties_Store_name() throws JaloBusinessException
+						{
+							
+							
+							
+							Map customPropsMap = new HashMap();
+							
+							setAttributeProperties(
+								"Store", 
+								"name",
+								false, 
+								null,
+								null,
+								null,
+								true,
+								true,
+								null,
+								customPropsMap,
+								null
+							);
+						}
+					
+						public void single_setAttributeProperties_Store_employees() throws JaloBusinessException
+						{
+							
+							
+							
+							Map customPropsMap = new HashMap();
+							
+							setAttributeProperties(
+								"Store", 
+								"employees",
+								false, 
+								null,
+								null,
+								null,
+								true,
+								true,
+								null,
+								customPropsMap,
+								null
+							);
+						}
+					
+						public void single_setAttributeProperties_Store_location() throws JaloBusinessException
+						{
+							
+							
+							
+							Map customPropsMap = new HashMap();
+							
+							setAttributeProperties(
+								"Store", 
+								"location",
+								false, 
+								null,
+								null,
+								null,
+								true,
+								true,
+								null,
+								customPropsMap,
+								null
+							);
+						}
+					
+								public void single_setRelAttributeProperties_Products2Store_source() throws JaloBusinessException
 								{
 									
 									Map customPropsMap = new HashMap();
 									
 
 									setAttributeProperties(
-										"CustomStore", 
-										"electronics",
+										"Store", 
+										"products",
 										false, 
 										null,
 										null,
@@ -514,14 +471,14 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 									);
 								}
 							
-								public void single_setRelAttributeProperties_Electronics2Store_target() throws JaloBusinessException
+								public void single_setRelAttributeProperties_Products2Store_target() throws JaloBusinessException
 								{
 									
 									Map customPropsMap = new HashMap();
 									
 
 									setAttributeProperties(
-										"CustomElectronics", 
+										"Product", 
 										"store",
 										false, 
 										null,

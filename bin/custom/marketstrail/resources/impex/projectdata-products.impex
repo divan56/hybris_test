@@ -1,0 +1,18 @@
+UPDATE GenericItem[processor = de.hybris.platform.commerceservices.impex.impl.ConfigPropertyImportProcessor]; pk[unique = true]
+
+$productCatalog = marketsProductCatalog
+$baseProduct = baseProduct(code, $catalogVersion)
+$approved = approvalstatus(code)[default='approved']
+$catalogVersion = catalogversion(catalog(id[default=$productCatalog]), version[default='Online'])[unique=true, default=$productCatalog:Online]
+
+INSERT_UPDATE Electronic; code ; store(code); name[unique = true][lang = en]; price; segmentType(code); baseProduct(code); $catalogVersion; $approved
+                        ; A001 ; A01  ; LJ OLEG                       ; 205  ; eco              ; 20703
+                        ; A002 ; A01  ; Pony F11                      ; 457  ; midprice         ; 20702
+                        ; A003 ; A01  ; MacCook Ground                ; 971  ; luxury           ; 20701
+
+                        ; B001 ; B01  ; Moshiba Q28JH                 ; 278  ; eco              ; 20802
+                        ; B002 ; B01  ; Sasung K2                     ; 400  ; midprice         ; 20803
+
+                        ; C001 ; C01  ; IClone 12                     ; 900  ; luxury           ; 20903
+                        ; C002 ; C01  ; DayPeewo PLZ21                ; 354  ; midprice         ; 20902
+

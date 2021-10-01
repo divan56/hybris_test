@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 30.09.2021 22:38:40                         ---
+ * --- Generated at 01.10.2021 19:52:07                         ---
  * ----------------------------------------------------------------
  */
 package markettrail.constants;
@@ -16,26 +16,29 @@ public class GeneratedMarketstrailConstants
 	public static final String EXTENSIONNAME = "marketstrail";
 	public static class TC
 	{
-		public static final String CATEGORYTYPE = "CategoryType".intern();
-		public static final String CUSTOMELECTRONICS = "CustomElectronics".intern();
-		public static final String CUSTOMSTORE = "CustomStore".intern();
+		public static final String ELECTRONIC = "Electronic".intern();
+		public static final String SEGMENT = "Segment".intern();
+		public static final String STORE = "Store".intern();
 	}
 	public static class Attributes
 	{
-		// no constants defined.
+		public static class Product
+		{
+			public static final String STORE = "store".intern();
+		}
 	}
 	public static class Enumerations
 	{
-		public static class CategoryType
+		public static class Segment
 		{
-			public static final String SMARTPHONES = "smartphones".intern();
-			public static final String LAPTOPS = "laptops".intern();
-			public static final String TV = "TV".intern();
+			public static final String ECO = "eco".intern();
+			public static final String MIDPRICE = "midprice".intern();
+			public static final String LUXURY = "luxury".intern();
 		}
 	}
 	public static class Relations
 	{
-		public static final String ELECTRONICS2STORE = "Electronics2Store".intern();
+		public static final String PRODUCTS2STORE = "Products2Store".intern();
 	}
 	
 	protected GeneratedMarketstrailConstants()

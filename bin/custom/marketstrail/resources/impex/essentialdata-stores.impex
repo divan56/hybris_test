@@ -1,0 +1,33 @@
+UPDATE GenericItem[processor = de.hybris.platform.commerceservices.impex.impl.ConfigPropertyImportProcessor]; pk[unique = true]
+$productCatalog = marketsProductCatalog
+$baseProduct = baseProduct(code, $catalogVersion)
+$approved = approvalstatus(code)[default='approved']
+$catalogVersion = catalogversion(catalog(id[default=$productCatalog]), version[default='Online'])[unique=true, default=$productCatalog:Online]
+INSERT_UPDATE Store; code[unique = true]; name          ; employees; location   ; products
+                   ; A01                ; Shestyorochka ; 40       ; Lenin.st   ;
+                   ; B01                ; MixPrice      ; 30       ; Gogol.st   ;
+                   ; C01                ; Magnat        ; 34       ; Pushkin.st ;
+                   ;
+
+INSERT_UPDATE Catalog; id[unique = true]
+                     ; $productCatalog
+
+INSERT_UPDATE CatalogVersion; catalog(id)[unique = true]; version[unique = true]; active; languages(isoCode); readPrincipals(uid)
+                            ; $productCatalog           ; Online                ; true  ; en                ; employeegroup
+
+INSERT_UPDATE Product; code[unique = true]; name; store(code); variantType(code); $catalogVersion; $approved
+                     ; 20701              ; Laptops        ; A01        ; Electronic ;
+                     ; 20702              ; TV             ; A01        ; Electronic ;
+                     ; 20703              ; Smartphones    ; A01        ; Electronic ;
+
+                     ; 20801              ; Laptops        ; B01        ; Electronic ;
+                     ; 20802              ; TV             ; B01        ; Electronic ;
+                     ; 20803              ; Smartphones    ; B01        ; Electronic ;
+
+                     ; 20901              ; Laptops        ; C01        ; Electronic ;
+                     ; 20902              ; TV             ; C01        ; Electronic ;
+                     ; 20903              ; Smartphones    ; C01        ; Electronic ;
+
+
+
+

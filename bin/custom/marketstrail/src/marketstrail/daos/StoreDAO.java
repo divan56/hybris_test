@@ -1,11 +1,12 @@
 package marketstrail.daos;
 
-import markettrail.model.CustomStoreModel;
+
+import markettrail.model.StoreModel;
 
 import java.util.List;
 
 public interface StoreDAO {
-    List<CustomStoreModel> getAllStores();
+    List<StoreModel> getAllStores();
 
-    List<CustomStoreModel> getStoreByCode(String code);
+    List<StoreModel> getStoreByCode(String code);
 }

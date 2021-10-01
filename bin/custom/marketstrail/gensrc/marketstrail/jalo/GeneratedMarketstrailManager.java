@@ -1,24 +1,27 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 30.09.2021 22:38:40                         ---
+ * --- Generated at 01.10.2021 19:52:07                         ---
  * ----------------------------------------------------------------
  */
 package marketstrail.jalo;
 
+import de.hybris.platform.jalo.GenericItem;
 import de.hybris.platform.jalo.Item;
 import de.hybris.platform.jalo.Item.AttributeMode;
 import de.hybris.platform.jalo.JaloBusinessException;
 import de.hybris.platform.jalo.JaloSystemException;
 import de.hybris.platform.jalo.SessionContext;
 import de.hybris.platform.jalo.extension.Extension;
+import de.hybris.platform.jalo.product.Product;
 import de.hybris.platform.jalo.type.ComposedType;
 import de.hybris.platform.jalo.type.JaloGenericCreationException;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import markettrail.constants.MarketstrailConstants;
-import markettrail.jalo.CustomElectronics;
-import markettrail.jalo.CustomStore;
+import markettrail.jalo.Electronic;
+import markettrail.jalo.Store;
 
 /**
  * Generated class for type <code>MarketstrailManager</code>.
@@ -30,6 +33,9 @@ public abstract class GeneratedMarketstrailManager extends Extension
 	static
 	{
 		final Map<String, Map<String, AttributeMode>> ttmp = new HashMap();
+		Map<String, AttributeMode> tmp = new HashMap<String, AttributeMode>();
+		tmp.put("store", AttributeMode.INITIAL);
+		ttmp.put("de.hybris.platform.jalo.product.Product", Collections.unmodifiableMap(tmp));
 		DEFAULT_INITIAL_ATTRIBUTES = ttmp;
 	}
 	@Override
@@ -44,12 +50,12 @@ public abstract class GeneratedMarketstrailManager extends Extension
 		return ret;
 	}
 	
-	public CustomElectronics createCustomElectronics(final SessionContext ctx, final Map attributeValues)
+	public Electronic createElectronic(final SessionContext ctx, final Map attributeValues)
 	{
 		try
 		{
-			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( MarketstrailConstants.TC.CUSTOMELECTRONICS );
-			return (CustomElectronics)type.newInstance( ctx, attributeValues );
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( MarketstrailConstants.TC.ELECTRONIC );
+			return (Electronic)type.newInstance( ctx, attributeValues );
 		}
 		catch( JaloGenericCreationException e)
 		{
@@ -61,21 +67,21 @@ public abstract class GeneratedMarketstrailManager extends Extension
 		}
 		catch( JaloBusinessException e )
 		{
-			throw new JaloSystemException( e ,"error creating CustomElectronics : "+e.getMessage(), 0 );
+			throw new JaloSystemException( e ,"error creating Electronic : "+e.getMessage(), 0 );
 		}
 	}
 	
-	public CustomElectronics createCustomElectronics(final Map attributeValues)
+	public Electronic createElectronic(final Map attributeValues)
 	{
-		return createCustomElectronics( getSession().getSessionContext(), attributeValues );
+		return createElectronic( getSession().getSessionContext(), attributeValues );
 	}
 	
-	public CustomStore createCustomStore(final SessionContext ctx, final Map attributeValues)
+	public Store createStore(final SessionContext ctx, final Map attributeValues)
 	{
 		try
 		{
-			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( MarketstrailConstants.TC.CUSTOMSTORE );
-			return (CustomStore)type.newInstance( ctx, attributeValues );
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( MarketstrailConstants.TC.STORE );
+			return (Store)type.newInstance( ctx, attributeValues );
 		}
 		catch( JaloGenericCreationException e)
 		{
@@ -87,19 +93,55 @@ public abstract class GeneratedMarketstrailManager extends Extension
 		}
 		catch( JaloBusinessException e )
 		{
-			throw new JaloSystemException( e ,"error creating CustomStore : "+e.getMessage(), 0 );
+			throw new JaloSystemException( e ,"error creating Store : "+e.getMessage(), 0 );
 		}
 	}
 	
-	public CustomStore createCustomStore(final Map attributeValues)
+	public Store createStore(final Map attributeValues)
 	{
-		return createCustomStore( getSession().getSessionContext(), attributeValues );
+		return createStore( getSession().getSessionContext(), attributeValues );
 	}
 	
 	@Override
 	public String getName()
 	{
 		return MarketstrailConstants.EXTENSIONNAME;
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Product.store</code> attribute.
+	 * @return the store
+	 */
+	public Store getStore(final SessionContext ctx, final Product item)
+	{
+		return (Store)item.getProperty( ctx, MarketstrailConstants.Attributes.Product.STORE);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Product.store</code> attribute.
+	 * @return the store
+	 */
+	public Store getStore(final Product item)
+	{
+		return getStore( getSession().getSessionContext(), item );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Product.store</code> attribute. 
+	 * @param value the store
+	 */
+	public void setStore(final SessionContext ctx, final Product item, final Store value)
+	{
+		item.setProperty(ctx, MarketstrailConstants.Attributes.Product.STORE,value);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Product.store</code> attribute. 
+	 * @param value the store
+	 */
+	public void setStore(final Product item, final Store value)
+	{
+		setStore( getSession().getSessionContext(), item, value );
 	}
 	
 }
