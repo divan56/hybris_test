@@ -25,7 +25,7 @@
 
 	<relations>
 		<relation code="Products2Store" autocreate="true" generate="false" localized="false">
-			<sourceElement qualifier="products" type="Product" collectiontype="set" cardinality="many" ordered="false">
+			<sourceElement qualifier="products" type="Electronic" collectiontype="set" cardinality="many" ordered="false">
 				<modifiers read="true" write="true" search="true" optional="false"/>
 			</sourceElement>
 			<targetElement qualifier="store" type="Store" cardinality="one">

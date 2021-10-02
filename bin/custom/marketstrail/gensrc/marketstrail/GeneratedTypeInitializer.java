@@ -107,7 +107,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			false, 
 
 			"products", 
-			"Product", 
+			"Electronic", 
 			true,
 			de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG, 
 			true,
@@ -258,7 +258,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			"Products2Store", 
 			false, 
 			"products", 
-			"Product", 
+			"Electronic", 
 			true,
 			de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG, 
 			"store", 
@@ -478,7 +478,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 									
 
 									setAttributeProperties(
-										"Product", 
+										"Electronic", 
 										"store",
 										false, 
 										null,

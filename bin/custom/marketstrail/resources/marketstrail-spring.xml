@@ -34,4 +34,9 @@
     <bean id="defaultStoreService" class="marketstrail.service.impl.DefaultStoreService">
     <property name="storeDAO" ref="storeDAO"/>
     </bean>
+
+    <alias name="defaultStoreFacade" alias="storeFacade"/>
+    <bean id="defaultStoreFacade" class="marketstrail.facades.impl.DefaultStoreFacade">
+        <property name="storeService" ref="storeService"/>
+    </bean>
 </beans>

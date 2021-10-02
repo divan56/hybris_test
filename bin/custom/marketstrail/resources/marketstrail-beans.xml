@@ -28,5 +28,5 @@
 		<property name="price" type="Integer"/>
 		<property name="category" type="String"/>
 	</bean>
-	
+
 </beans>

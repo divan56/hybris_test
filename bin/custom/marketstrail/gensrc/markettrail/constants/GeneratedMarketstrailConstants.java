@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 01.10.2021 19:52:07                         ---
+ * --- Generated at 02.10.2021 17:19:50                         ---
  * ----------------------------------------------------------------
  */
 package markettrail.constants;
@@ -22,10 +22,7 @@ public class GeneratedMarketstrailConstants
 	}
 	public static class Attributes
 	{
-		public static class Product
-		{
-			public static final String STORE = "store".intern();
-		}
+		// no constants defined.
 	}
 	public static class Enumerations
 	{

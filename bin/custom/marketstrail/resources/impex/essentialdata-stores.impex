@@ -15,18 +15,18 @@ INSERT_UPDATE Catalog; id[unique = true]
 INSERT_UPDATE CatalogVersion; catalog(id)[unique = true]; version[unique = true]; active; languages(isoCode); readPrincipals(uid)
                             ; $productCatalog           ; Online                ; true  ; en                ; employeegroup
 
-INSERT_UPDATE Product; code[unique = true]; name; store(code); variantType(code); $catalogVersion; $approved
-                     ; 20701              ; Laptops        ; A01        ; Electronic ;
-                     ; 20702              ; TV             ; A01        ; Electronic ;
-                     ; 20703              ; Smartphones    ; A01        ; Electronic ;
+INSERT_UPDATE Product; code[unique = true]; name        ; variantType(code); $catalogVersion; $approved
+                     ; 20701              ; Laptops     ; Electronic       ;
+                     ; 20702              ; TV          ; Electronic       ;
+                     ; 20703              ; Smartphones ; Electronic       ;
 
-                     ; 20801              ; Laptops        ; B01        ; Electronic ;
-                     ; 20802              ; TV             ; B01        ; Electronic ;
-                     ; 20803              ; Smartphones    ; B01        ; Electronic ;
+                     ; 20801              ; Laptops     ; Electronic       ;
+                     ; 20802              ; TV          ; Electronic       ;
+                     ; 20803              ; Smartphones ; Electronic       ;
 
-                     ; 20901              ; Laptops        ; C01        ; Electronic ;
-                     ; 20902              ; TV             ; C01        ; Electronic ;
-                     ; 20903              ; Smartphones    ; C01        ; Electronic ;
+                     ; 20901              ; Laptops     ; Electronic       ;
+                     ; 20902              ; TV          ; Electronic       ;
+                     ; 20903              ; Smartphones ; Electronic       ;
 
 
 
