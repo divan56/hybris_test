@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+
+<items 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+			xsi:noNamespaceSchemaLocation="items.xsd">
+	<enumtypes>
+		<enumtype code="PlanetType" autocreate="true" generate="true" dynamic="false">
+			<value code="volcanic"/>
+			<value code="desert"/>
+			<value code="forest"/>
+			<value code="ocean"/>
+		</enumtype>
+	</enumtypes>
+	<relations>
+		<relation code="Planets2Overlord" localized="false" generate="false" autocreate="true">
+			<sourceElement type="Planet" qualifier="planets" collectiontype="set" ordered="false" cardinality="many">
+				<modifiers read="true" write="true" search="true" optional="true"/>
+			</sourceElement>
+			<targetElement type="Overlord" qualifier="overlord" cardinality="one" ordered="false">
+				<modifiers optional="false" search="true" write="true" read="true"/>
+			</targetElement>
+		</relation>
+	</relations>
+	<itemtypes>
+		<itemtype code="Overlord" generate="true" autocreate="true">
+			<deployment table="overlords" typecode="30900"/>
+			<attributes>
+				<attribute qualifier="id" type="java.lang.String">
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="name" type="java.lang.String">
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="power" type="java.lang.Integer">
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="age" type="java.lang.Integer">
+					<persistence type="dynamic" attributeHandler="overlordAgeAttributeHandler"/>
+				</attribute>
+				<attribute qualifier="yearOfBirth" type="java.lang.Integer">
+					<persistence type="property"/>
+				</attribute>
+			</attributes>
+		</itemtype>
+		<itemtype code="Planet" generate="true" autocreate="true">
+			<deployment table="planets" typecode="30901"/>
+			<attributes>
+				<attribute qualifier="id" type="java.lang.String">
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="name" type="java.lang.String">
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="age" type="java.lang.Long">
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="planetType" type="PlanetType">
+					<persistence type="property"/>
+				</attribute>
+			</attributes>
+		</itemtype>
+	</itemtypes>
+</items>

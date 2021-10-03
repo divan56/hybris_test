@@ -5,9 +5,10 @@
     <extension name="backoffice"/>
 
 	<extension name="platformbackoffice"/>
-	<extension name ="marketstrail"/>
+
         <!-- ext-template -->
         <extension name="yempty" />
         <extension name="yhacext" />
+		<extension name="myownapp"/>
   </extensions>
 </hybrisconfig>

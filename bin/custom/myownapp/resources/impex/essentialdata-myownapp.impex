@@ -1,0 +1,18 @@
+UPDATE GenericItem[processor = de.hybris.platform.commerceservices.impex.impl.ConfigPropertyImportProcessor]; pk[unique = true]
+
+INSERT_UPDATE Overlord; id[unique = true]; name; power; yearOfBirth;
+                      ; A1               ; Pog ; 100  ; 4153
+                      ; A2               ; Rog ; 95   ; 3956
+                      ; A3               ; Mog ; 97   ; 3985
+                      ; A4               ; Hog ; 60   ; 3643
+                      ; A5               ; Tog ; 70   ; 3857                          ;
+
+
+INSERT_UPDATE Planet; id[unique = true]; name   ; age     ; planetType(code); overlord(id)
+                    ; V01              ; HFW01  ; 384304  ; volcanic        ; A1
+                    ; V02              ; INDW2  ; 3489238 ; volcanic        ; A3
+                    ; O11              ; C1200  ; 3394729 ; ocean           ; A1
+                    ; D01              ; JRE42  ; 3842304 ; desert          ; A2
+                    ; D02              ; UFE23  ; 5435352 ; desert          ; A5
+                    ; F01              ; HBS324 ; 3235236 ; forest          ; A4
+                    ; F02              ; JE34   ; 654683  ; forest          ; A3
