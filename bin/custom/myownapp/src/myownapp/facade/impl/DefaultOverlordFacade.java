@@ -8,7 +8,6 @@ import myownapp.model.PlanetModel;
 import myownapp.service.OverlordService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Required;
-import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.HashSet;

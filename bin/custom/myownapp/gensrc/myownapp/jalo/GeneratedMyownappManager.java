@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 03.10.2021 17:53:02                         ---
+ * --- Generated at 05.10.2021 19:16:05                         ---
  * ----------------------------------------------------------------
  */
 package myownapp.jalo;
@@ -19,6 +19,7 @@ import java.util.Map;
 import myownapp.constants.MyownappConstants;
 import myownapp.jalo.Overlord;
 import myownapp.jalo.Planet;
+import myownapp.jalo.Praise;
 
 /**
  * Generated class for type <code>MyownappManager</code>.
@@ -94,6 +95,32 @@ public abstract class GeneratedMyownappManager extends Extension
 	public Planet createPlanet(final Map attributeValues)
 	{
 		return createPlanet( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public Praise createPraise(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( MyownappConstants.TC.PRAISE );
+			return (Praise)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating Praise : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public Praise createPraise(final Map attributeValues)
+	{
+		return createPraise( getSession().getSessionContext(), attributeValues );
 	}
 	
 	@Override

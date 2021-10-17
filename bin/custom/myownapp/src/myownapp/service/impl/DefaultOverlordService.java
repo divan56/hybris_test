@@ -29,7 +29,7 @@ public class DefaultOverlordService implements OverlordService {
             throw new UnknownIdentifierException("No result found with id " + id);
         }
         if (overlords.size() > 1) {
-            throw new AmbiguousIdentifierException(overlords.size() + "founded with id " + id);
+            throw new AmbiguousIdentifierException(overlords.size() + " founded with id " + id);
         }
         return overlords.get(0);
     }

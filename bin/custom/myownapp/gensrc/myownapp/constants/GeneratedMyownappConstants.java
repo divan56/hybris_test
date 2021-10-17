@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 03.10.2021 17:53:02                         ---
+ * --- Generated at 05.10.2021 19:16:05                         ---
  * ----------------------------------------------------------------
  */
 package myownapp.constants;
@@ -19,6 +19,7 @@ public class GeneratedMyownappConstants
 		public static final String OVERLORD = "Overlord".intern();
 		public static final String PLANET = "Planet".intern();
 		public static final String PLANETTYPE = "PlanetType".intern();
+		public static final String PRAISE = "Praise".intern();
 	}
 	public static class Attributes
 	{

@@ -33,14 +33,40 @@
     <alias name="defaultOverlordDAO" alias="overlordDAO"/>
     <bean id="defaultOverlordDAO" class="myownapp.daos.impl.DefaultOverlordDAO">
     </bean>
+    <alias name="defaultPraiseDAO" alias="praiseDAO"/>
+    <bean id="defaultPraiseDAO" class="myownapp.daos.impl.DefaultPraiseDAO">
+        <property name="flexibleSearchService" ref="flexibleSearchService"/>
+    </bean>
 
     <alias name="defaultOverlordService" alias="overlordService"/>
     <bean id="defaultOverlordService" class="myownapp.service.impl.DefaultOverlordService">
         <property name="overlordDAO" ref="overlordDAO"/>
     </bean>
+    <alias name="defaultPraiseService" alias="praiseService"/>
+    <bean id="defaultPraiseService" class="myownapp.service.impl.DefaultPraiseService">
+        <property name="praiseDAO" ref="praiseDAO"/>
+    </bean>
 
     <alias name="defaultOverlordFacade" alias="overlordFacade"/>
     <bean id="defaultOverlordFacade" class="myownapp.facade.impl.DefaultOverlordFacade">
         <property name="overlordService" ref="overlordService"/>
+    </bean>
+
+    <bean id="newOverlordEventListener" class="myownapp.events.listeners.NewOverlordEventListener" parent="abstractEventListener">
+        <property name="modelService" ref="modelService"/>
+    </bean>
+    <bean id="overlordPraiseEventListener" class="myownapp.events.listeners.OverlordPraiseEventListener" parent="abstractEventListener">
+        <property name="modelService" ref="modelService"/>
+    </bean>
+    <bean id="overlordPraiseInterceptor" class="myownapp.interceptors.OverlordPraiseInterceptor">
+        <property name="eventService" ref="eventService"/>
+    </bean>
+    <bean id="OverlordInterceptorMapping" class="de.hybris.platform.servicelayer.interceptor.impl.InterceptorMapping">
+        <property name="interceptor" ref="overlordPraiseInterceptor"/>
+        <property name="typeCode" value="Overlord"/>
+    </bean>
+    <bean id="praiseCleanerJob" class="myownapp.jobs.PraiseCleanerJob" parent="abstractJobPerformable">
+        <property name="flexibleSearchService" ref="flexibleSearchService"/>
+        <property name="praiseService" ref="praiseService"/>
     </bean>
 </beans>

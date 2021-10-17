@@ -59,5 +59,16 @@
 				</attribute>
 			</attributes>
 		</itemtype>
+		<itemtype code="Praise" generate="true" autocreate="true">
+			<deployment table="praises" typecode="30902"/>
+			<attributes>
+				<attribute qualifier="overlordId" type="java.lang.String">
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="message" type="java.lang.String">
+					<persistence type="property"/>
+				</attribute>
+			</attributes>
+		</itemtype>
 	</itemtypes>
 </items>

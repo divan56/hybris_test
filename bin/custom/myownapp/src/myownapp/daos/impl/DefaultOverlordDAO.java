@@ -12,7 +12,7 @@ import java.util.List;
 public class DefaultOverlordDAO implements OverlordDAO {
 
     @Autowired
-    FlexibleSearchService flexibleSearchService;
+   private FlexibleSearchService flexibleSearchService;
 
     @Override
     public List<OverlordModel> getAllOverlords() {
